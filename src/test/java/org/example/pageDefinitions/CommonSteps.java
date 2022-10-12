@@ -31,7 +31,7 @@ public class CommonSteps {
     @After
     public void tearDown() throws InterruptedException {
         Thread.sleep(2000);
-    //   driver.quit();
+   driver.quit();
 
     }
 
