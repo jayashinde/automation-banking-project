@@ -5,7 +5,10 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.example.pageActions.LoginActions;
 import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+
+import java.util.Set;
 
 public class Logindefinitions {
   WebDriver driver;
@@ -16,19 +19,20 @@ public class Logindefinitions {
         this.loginActions = loginActions;
     }
 
-    @When("Enter {string} And  {string} And click on login")
-    public void enter_and_and_click_on_login(String username, String passwords) throws InterruptedException {
-   loginActions.log(username);
-   loginActions.pass(passwords);
-   loginActions.logo();
+
+    @When("enter {string} And {string} And click on login")
+    public void enterAndAndClickOnLogin(String userid, String userpass) throws InterruptedException {
+        loginActions.userid(userid);
+        loginActions.pass(userpass);
+        loginActions.click();
+
+     loginActions.newcust();
+
 
     }
 
-
-
     @Then("login should be successful")
-    public void login_should_be_successful() {
-
+    public void loginShouldBeSuccessful() {
         System.out.println("login should be successful");
     }
 

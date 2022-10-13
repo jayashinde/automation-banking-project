@@ -13,19 +13,22 @@ public class LoginActions {
         this.driver = commonSteps.getDriver();
         this.loginElements = new LoginElements(driver);
     }
-    public void log(String user) throws InterruptedException {
+    public void userid(String user) throws InterruptedException {
         loginElements.user.sendKeys(user);
         Thread.sleep(1000);
     }
     public void pass(String p){
         loginElements.passwoord.sendKeys(p);
     }
-    public void logo(){
+    public void click(){
         loginElements.login.click();
     }
-    public void alert(){
-
+    public void newcust() throws InterruptedException {
+        Thread.sleep(2000);
+       loginElements.newerclick.click();
+       Thread.sleep(5000);
     }
+
 
 
 

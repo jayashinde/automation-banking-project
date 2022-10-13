@@ -3,6 +3,8 @@ package org.example.pageDefinitions;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -21,18 +23,18 @@ public class CommonSteps {
 
         driver.manage().window().maximize();
     }
-    @Given("Open url in the browser")
+    @Given("open url in the browser")
     public void open_url_in_the_browser() {
   driver.get("https://demo.guru99.com/V2/");
 
     }
 
 
+
     @After
     public void tearDown() throws InterruptedException {
         Thread.sleep(2000);
-   driver.quit();
+       driver.quit();
 
     }
-
 }
