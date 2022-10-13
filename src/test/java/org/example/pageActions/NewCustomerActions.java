@@ -1,48 +1,48 @@
 package org.example.pageActions;
 
 import org.example.pageDefinitions.CommonSteps;
-import org.example.pageElements.NewAccountElements;
+import org.example.pageElements.NewCustomerElements;
 import org.openqa.selenium.WebDriver;
 
 public class NewCustomerActions {
     private WebDriver driver;
-    NewAccountElements newAccountElements;
+    NewCustomerElements newCustomerElements;
 
     public NewCustomerActions(CommonSteps commonSteps) {
         this.driver = commonSteps.getDriver();
-        this.newAccountElements = new NewAccountElements(driver);
+        this.newCustomerElements = new NewCustomerElements(driver);
     }
    public void name(String name){
-        newAccountElements.name.sendKeys(name);
+        newCustomerElements.name.sendKeys(name);
    }
     public void gender(){
-        newAccountElements.gender.click();
+        newCustomerElements.gender.click();
     }
 
     public void date(String dateofbday){
-        newAccountElements.date.sendKeys(dateofbday);
+        newCustomerElements.date.sendKeys(dateofbday);
     }
     public void address(String address){
-        newAccountElements.addresses.sendKeys(address);
+        newCustomerElements.addresses.sendKeys(address);
     }
     public void city(String custcity){
-        newAccountElements.city.sendKeys(custcity);
+        newCustomerElements.city.sendKeys(custcity);
     }
     public void sate(String state){
-        newAccountElements.states.sendKeys(state);
+        newCustomerElements.states.sendKeys(state);
     }
     public void pin(String pincode){
-        newAccountElements.pin.sendKeys(pincode);
+        newCustomerElements.pin.sendKeys(pincode);
     }
 
     public void mobileno(String mobileno){
-        newAccountElements.telephone.sendKeys(mobileno);
+        newCustomerElements.telephone.sendKeys(mobileno);
     }
     public void mail(String email){
-        newAccountElements.email.sendKeys(email);
+        newCustomerElements.email.sendKeys(email);
     }
     public void submit(){
-        newAccountElements.submit.click();
+        newCustomerElements.submit.click();
     }
 
 
