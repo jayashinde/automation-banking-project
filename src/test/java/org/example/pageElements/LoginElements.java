@@ -17,8 +17,29 @@ public class LoginElements {
     @FindBy(xpath = "//td/input[@name='btnLogin']")
     public WebElement login;
 
-    @FindBy(xpath = "//a[@href='addcustomerpage.php']")
-    public WebElement newerclick;
+
+
+    @FindBy(name = "uid")
+    public WebElement userid;
+    @FindBy(name = "password")
+    public WebElement pass;
+    @FindBy(name = "btnLogin")
+    public WebElement log;
+
+    @FindBy(name = "uid")
+    public WebElement userId;
+    @FindBy(name = "password")
+    public WebElement password;
+    @FindBy(name = "btnLogin")
+    public WebElement logbutton;
+
+
+    @FindBy(name = "uid")
+    public WebElement Id;
+    @FindBy(name = "password")
+    public WebElement pas;
+    @FindBy(name = "btnLogin")
+    public WebElement lobutton;
 
 
 

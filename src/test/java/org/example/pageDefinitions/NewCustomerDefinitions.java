@@ -1,5 +1,6 @@
 package org.example.pageDefinitions;
 
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.example.pageActions.NewCustomerActions;
@@ -15,9 +16,9 @@ public class NewCustomerDefinitions {
         this.newCustomerActions = newCustomerActions;
     }
 
-    @When("click on new customer  And enter {string} And click on gender")
+    @When("click on new customer And enter {string} And click on gender")
     public void click_on_new_customer_and_enter_and_click_on_gender(String names) throws InterruptedException {
-
+   newCustomerActions.newcutomer();
    newCustomerActions.name(names);
    newCustomerActions.gender();
     }
@@ -57,5 +58,44 @@ public class NewCustomerDefinitions {
     @Then("login should be sucessful message should be display")
     public void loginShouldBeSucessfulMessageShouldBeDisplay() {
         System.out.println("login should be sucessful message should be display");
+    }
+
+
+    @Given("Click on new customer And I keep firstname blank")
+    public void clickOnNewCustomerAndIKeepFirstnameBlank() throws InterruptedException {
+        newCustomerActions.newcutomertwo();
+        newCustomerActions.nametwo();
+
+    }
+
+    @Then("I should get error message")
+    public void iShouldGetErrorMessage() {
+        System.out.println("I should get error message");
+    }
+
+    @Given("Click on new customer And I enter numbers in name field")
+    public void clickOnNewCustomerAndIEnterNumbersInNameField() throws InterruptedException {
+        newCustomerActions.newcutomerthree();
+        newCustomerActions.namethree();
+
+    }
+
+
+    @Then("I should get error message numbers are not allowed")
+    public void iShouldGetErrorMessageNumbersAreNotAllowed() {
+        System.out.println("I should get error message numbers are not allowed");
+    }
+
+
+    @Given("Click on new customer And I enter special characters in name field")
+    public void clickOnNewCustomerAndIEnterSpecialCharactersInNameField() throws InterruptedException {
+        newCustomerActions.newcutomerfour();
+        newCustomerActions.namefour();
+
+    }
+    @Then("I should get error message special charecters not allow")
+    public void iShouldGetErrorMessageSpecialCharectersNotAllow() {
+        System.out.println("I should get error message special charecters not allow");
+
     }
 }

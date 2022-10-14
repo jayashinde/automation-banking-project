@@ -16,7 +16,7 @@ public class EditCustomerDefinitions {
         this.editCustomerActions = editCustomerActions;
     }
     @When("click on edit customer And enter customer id")
-    public void click_on_edit_customer_and_enter_customer_id() {
+    public void click_on_edit_customer_and_enter_customer_id() throws InterruptedException {
         editCustomerActions.editbutton();
         editCustomerActions.customid();
     }

@@ -13,7 +13,8 @@ public class EditCustomerActions {
         this.driver = commonSteps.getDriver();
         this.editCustomerElements = new EditCustomerElements(driver);
     }
-    public void editbutton(){
+    public void editbutton() throws InterruptedException {
+        Thread.sleep(5000);
         editCustomerElements.editbutton.click();
     }
     public void customid(){

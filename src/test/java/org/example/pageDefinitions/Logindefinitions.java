@@ -26,7 +26,7 @@ public class Logindefinitions {
         loginActions.pass(userpass);
         loginActions.click();
 
-     loginActions.newcust();
+
 
 
     }
@@ -36,4 +36,41 @@ public class Logindefinitions {
         System.out.println("login should be successful");
     }
 
+    @When("enter userid And do not enter password And click on login")
+    public void enterUseridAndDoNotEnterPasswordAndClickOnLogin() {
+        loginActions.userid();
+        loginActions.passord();
+        loginActions.submit();
+    }
+
+    @Then("error message should be displayed")
+    public void erroMessageShouldBeDisplayed() {
+        System.out.println("erro message should be displayed");
+    }
+
+    @When("do not userid And enter password And click on login")
+    public void enterDoNotUseridAndEnterPasswordAndClickOnLogin() {
+        loginActions.userId();
+        loginActions.passords();
+        loginActions.submited();
+
+
+    }
+    @Then("error message should be display")
+    public void erroMessage() {
+        System.out.println("erro message should be displayed");
+    }
+
+    @When("do not userid And do not enter password And click on login")
+    public void doNotUseridAndDoNotEnterPasswordAndClickOnLogin() {
+        loginActions.useId();
+        loginActions.passor();
+        loginActions.sub();
+
+    }
+
+    @Then("error message should be show")
+    public void errorMessageShouldBeShow() {
+        System.out.println("error message should be show");
+    }
 }

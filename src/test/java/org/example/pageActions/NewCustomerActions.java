@@ -2,7 +2,11 @@ package org.example.pageActions;
 
 import org.example.pageDefinitions.CommonSteps;
 import org.example.pageElements.NewCustomerElements;
+import org.junit.Assert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.interactions.Actions;
 
 public class NewCustomerActions {
     private WebDriver driver;
@@ -12,7 +16,11 @@ public class NewCustomerActions {
         this.driver = commonSteps.getDriver();
         this.newCustomerElements = new NewCustomerElements(driver);
     }
-   public void name(String name){
+    public void newcutomer(){
+        newCustomerElements.newcustomerclick.click();
+    }
+   public void name(String name) throws InterruptedException {
+        Thread.sleep(5000);
         newCustomerElements.name.sendKeys(name);
    }
     public void gender(){
@@ -43,6 +51,53 @@ public class NewCustomerActions {
     }
     public void submit(){
         newCustomerElements.submit.click();
+    }
+
+//NC02
+      public void newcutomertwo(){
+    newCustomerElements.newcustomer.click();
+
+    }
+    public void nametwo() throws InterruptedException {
+        Thread.sleep(5000);
+        newCustomerElements.names.sendKeys("");
+        Actions action=new Actions(driver);
+        action.sendKeys(Keys.TAB).perform();
+
+        String messageE="Customer name must not be blank";
+        String  messageA=driver.findElement(By.id("message")).getText();
+        Assert.assertEquals(messageE,messageA);
+
+    }
+    //NC03
+    public void newcutomerthree(){
+        newCustomerElements.newcustomerthree.click();
+
+    }
+    public void namethree() throws InterruptedException {
+        Thread.sleep(5000);
+        newCustomerElements.namethree.sendKeys("123556");
+
+
+        String messageE="Numbers are not allowed";
+        String  messageA=driver.findElement(By.id("message")).getText();
+        Assert.assertEquals(messageE,messageA);
+
+    }
+    //NC04
+    public void newcutomerfour(){
+        newCustomerElements.newcustomerfour.click();
+
+    }
+    public void namefour() throws InterruptedException {
+        Thread.sleep(5000);
+        newCustomerElements.namefour.sendKeys("@#$");
+
+
+        String messageE="Special characters are not allowed";
+        String  messageA=driver.findElement(By.id("message")).getText();
+        Assert.assertEquals(messageE,messageA);
+
     }
 
 

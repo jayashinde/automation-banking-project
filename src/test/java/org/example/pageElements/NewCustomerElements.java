@@ -13,7 +13,8 @@ public class NewCustomerElements {
         this.driver = driver;
         PageFactory.initElements(driver,this);
     }
-
+    @FindBy(xpath = "//a[@href='addcustomerpage.php']")
+    public WebElement newcustomerclick;
     @FindBy(xpath = "//input[@name='name']")
     public WebElement name;
 
@@ -37,5 +38,23 @@ public class NewCustomerElements {
     public WebElement email;
     @FindBy(xpath = "//input[@name='sub']")
     public WebElement submit;
+
+    //@NC2
+    @FindBy(xpath = "//a[@href='addcustomerpage.php']")
+    public WebElement newcustomer;
+    @FindBy(xpath = "//input[@name='name']")
+    public WebElement names;
+    //@NC3
+    @FindBy(xpath = "//a[@href='addcustomerpage.php']")
+    public WebElement newcustomerthree;
+    @FindBy(xpath = "//input[@name='name']")
+    public WebElement namethree;
+
+    //@NC4
+    @FindBy(xpath = "//a[@href='addcustomerpage.php']")
+    public WebElement newcustomerfour;
+    @FindBy(xpath = "//input[@name='name']")
+    public WebElement namefour;
+
 
 }

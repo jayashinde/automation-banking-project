@@ -1,5 +1,5 @@
 @EC
-Feature: New Customer Validations
+Feature: Edit Customer Validations
   Background:
     Given open url in the browser
     When enter "mngr446207" And "UpujUbe" And click on login
