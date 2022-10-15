@@ -9,6 +9,7 @@ import org.junit.runner.RunWith;
         features = {"src/test/resources/Features"}
         ,glue = {"org/example/pageDefinitions"}
         ,tags = " @NC7"
+        ,dryRun = false
         ,plugin = {"pretty","html:target/html_report.html"}
 
 
