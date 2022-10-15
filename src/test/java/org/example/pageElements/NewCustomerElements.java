@@ -56,5 +56,22 @@ public class NewCustomerElements {
     @FindBy(xpath = "//input[@name='name']")
     public WebElement namefour;
 
+    //@NC5
+    @FindBy(xpath = "//a[@href='addcustomerpage.php']")
+    public WebElement newcustomerf;
+    @FindBy(xpath = "//input[@name='name']")
+    public WebElement namef;
+
+    //@NC6
+    @FindBy(xpath = "//a[@href='addcustomerpage.php']")
+    public WebElement newcustomeradd;
+    @FindBy(name= "addr")
+    public WebElement customeraddress;
+
+//NC7
+  @FindBy(xpath = "//a[@href='addcustomerpage.php']")
+  public WebElement addressclick7;
+    @FindBy(xpath = "//textarea[@name='addr']")
+    public WebElement addresses7;
 
 }

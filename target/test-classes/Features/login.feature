@@ -26,6 +26,15 @@ Feature: login feature
     Then error message should be show
 
 
+#  @VV
+#  Scenario Outline: Validate unsername field
+#    Given open url in the browser
+#    When I enter '<InvalidValue>' in username field
+#    Then I should get '<ErrorMessage>'
+#
+#    Examples:
+#      |InvalidValue|ErrorMessage|
+#      |     test       |      abc      |
 
 
 

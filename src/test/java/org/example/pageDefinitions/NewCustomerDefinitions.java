@@ -98,4 +98,43 @@ public class NewCustomerDefinitions {
         System.out.println("I should get error message special charecters not allow");
 
     }
+//NC5
+    @Given("Click on new customer And I enter space in first characters in name field")
+    public void clickOnNewCustomerAndIEnterSpaceInFirstCharactersInNameField() throws InterruptedException {
+        newCustomerActions.newcutomerf();
+        newCustomerActions.namef();
+
+    }
+
+    @Then("I should get error message First character cannot have space")
+    public void iShouldGetErrorMessageFirstCharacterCannotHaveSpace() {
+        System.out.println("I should get error message First character cannot have space");
+    }
+
+
+
+    //NC6
+
+    @Given("Click on new customer And I Do enter address in address field")
+    public void clickOnNewCustomerAndIDoEnterAddressInAddressField() throws InterruptedException {
+        newCustomerActions.newcutomeraddress();
+        newCustomerActions.custaddress();
+    }
+    @Then("I should get error message Address Field must not be blank")
+    public void iShouldGetErrorMessageAddressFieldMustNotBeBlank() {
+        System.out.println("I should get error message Address Field must not be blank");
+    }
+
+//NC7
+    @Given("Click on new customer I enter {string} in address field")
+    public void clickOnNewCustomerIEnterInvalidValueInAddressField(String address) throws InterruptedException {
+        newCustomerActions.click();
+        newCustomerActions.addressclick7(address);
+
+    }
+    @Then("I should get {string}")
+    public void ShouldGetErrorMessage(String expected) throws InterruptedException {
+        newCustomerActions.addressadd7(expected);
+
+    }
 }

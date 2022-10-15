@@ -11,11 +11,11 @@ import org.openqa.selenium.WebDriver;
 import java.util.Set;
 
 public class Logindefinitions {
-  WebDriver driver;
-  LoginActions loginActions;
+    WebDriver driver;
+    LoginActions loginActions;
 
     public Logindefinitions(CommonSteps commonSteps, LoginActions loginActions) {
-        this.driver =commonSteps.getDriver();
+        this.driver = commonSteps.getDriver();
         this.loginActions = loginActions;
     }
 
@@ -25,8 +25,6 @@ public class Logindefinitions {
         loginActions.userid(userid);
         loginActions.pass(userpass);
         loginActions.click();
-
-
 
 
     }
@@ -56,6 +54,7 @@ public class Logindefinitions {
 
 
     }
+
     @Then("error message should be display")
     public void erroMessage() {
         System.out.println("erro message should be displayed");
@@ -73,4 +72,17 @@ public class Logindefinitions {
     public void errorMessageShouldBeShow() {
         System.out.println("error message should be show");
     }
+
+//    @When("I enter {string} in username field")
+//    public void i_enter_in_username_field(String string) {
+//
+//
+//    }
+//
+//    @Then("I should get {string}")
+//    public void i_should_get(String string) {
+//
+//
+//    }
+
 }

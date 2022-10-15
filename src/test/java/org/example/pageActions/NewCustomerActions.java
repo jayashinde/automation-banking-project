@@ -99,11 +99,53 @@ public class NewCustomerActions {
         Assert.assertEquals(messageE,messageA);
 
     }
+    //NC05
+    public void newcutomerf(){
+        newCustomerElements.newcustomerf.click();
+
+    }
+    public void namef() throws InterruptedException {
+        Thread.sleep(5000);
+        newCustomerElements.namef.sendKeys(" jaya");
 
 
+        String messageE="First character can not have space";
+        String  messageA=driver.findElement(By.id("message")).getText();
+        Assert.assertEquals(messageE,messageA);
 
+    }
+    //NC6
 
+    public void newcutomeraddress(){
 
+        newCustomerElements.newcustomeradd.click();
+
+    }
+    public void custaddress() throws InterruptedException {
+        Thread.sleep(5000);
+        newCustomerElements.customeraddress.sendKeys("");
+        Actions action=new Actions(driver);
+        action.sendKeys(Keys.TAB).perform();
+
+       String messageE="Address Field must not be blank";
+        String  messageA=driver.findElement(By.id("message3")).getText();
+        Assert.assertEquals(messageE,messageA);
+
+    }
+    public void click(){
+        newCustomerElements.addressclick7.click();
+    }
+  public void addressclick7(String address) throws InterruptedException {
+
+        Thread.sleep(5000);
+        newCustomerElements.addresses7.sendKeys(address);
+        Actions actions=new Actions(driver);
+        actions.sendKeys(Keys.TAB).perform();
+  }
+    public void addressadd7(String expected) throws InterruptedException {
+       String actual= driver.findElement(By.id("message3")).getText();
+       Assert.assertEquals(expected,actual);
+    }
 
 
 }
